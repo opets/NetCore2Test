@@ -13,7 +13,7 @@ platform: Any CPU
 
 before_build:
   - nuget restore
-  - nuget install AppVeyorAssemblyVersionInfoWriter -Version 1.0.0 -OutputDirectory packages
+#  - nuget install AppVeyorAssemblyVersionInfoWriter -Version 1.0.0 -OutputDirectory packages
 #  - packages\AppVeyorAssemblyVersionInfoWriter.1.0.0\tools\AppVeyorAssemblyVersionInfoWriter.exe --output VersionInfo.cs
 
 build:
