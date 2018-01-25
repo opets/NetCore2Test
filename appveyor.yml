@@ -1,9 +1,9 @@
-version: 0.13.0-{branch}-{build}
+version: 0.0.1-{branch}-{build}
 image: Visual Studio 2017
 skip_branch_with_pr: true
 
 environment:
-  ASSEMBLY_FILE_VERSION: 0.13.0
+  ASSEMBLY_FILE_VERSION: 0.0.1
 
 nuget:
   account_feed: true
@@ -14,7 +14,7 @@ platform: Any CPU
 before_build:
   - nuget restore
   - nuget install AppVeyorAssemblyVersionInfoWriter -Version 1.0.0 -OutputDirectory packages
-  - packages\AppVeyorAssemblyVersionInfoWriter.1.0.0\tools\AppVeyorAssemblyVersionInfoWriter.exe --output VersionInfo.cs
+#  - packages\AppVeyorAssemblyVersionInfoWriter.1.0.0\tools\AppVeyorAssemblyVersionInfoWriter.exe --output VersionInfo.cs
 
 build:
   include_nuget_references: true
